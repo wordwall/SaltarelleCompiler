@@ -68,6 +68,14 @@ namespace System {
 			return 0;
 		}
 
+
+        [InlineCode("{$System.Script}.tryParseFloat({s}, {result})")]
+        public static bool TryParse(string s, out double result)
+        {
+            result = 0;
+            return false;
+        }
+
 		/// <summary>
 		/// Returns a string containing the value represented in exponential notation.
 		/// </summary>

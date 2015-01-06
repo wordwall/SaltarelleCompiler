@@ -164,3 +164,11 @@ ss.netFormatNumber = function#? DEBUG ss$netFormatNumber##(num, format, numberFo
 
 	return s;
 };
+
+ss.tryParseFloat = function#? DEBUG ss$tryParseFloat##(s, result) {
+    result.$ = 0;
+    var n = parseFloat(s, 10);
+    if (isNaN(n)) return false;
+    result.$ = n;
+    return true;
+};
