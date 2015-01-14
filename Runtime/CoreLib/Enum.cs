@@ -21,5 +21,9 @@ namespace System {
 		public static Array GetValues(Type enumType) {
 			return null;
 		}
+
+	    public static string GetName(Type enumType, Enum value) {
+	        return null;
+	    }
 	}
 }

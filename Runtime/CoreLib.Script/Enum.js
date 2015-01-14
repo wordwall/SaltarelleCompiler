@@ -78,3 +78,16 @@ ss_Enum.getValues = function#? DEBUG Enum$getValues##(enumType) {
 	}
 	return parts;
 };
+
+ss_Enum.getName = function #? DEBUG Enum$toString##(enumType, value) {
+
+    var values = enumType.prototype;
+
+    for( var prop in values) {
+        if( values.hasOwnProperty( prop ) ) {
+            if( values[ prop ] === value ) return prop;
+        }
+    }
+
+    throw new ss_ArgumentException('Invalid Enumeration Value');
+}; 
