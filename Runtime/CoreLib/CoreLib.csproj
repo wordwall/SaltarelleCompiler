@@ -114,6 +114,7 @@
     <Compile Include="DayOfWeek.cs" />
     <Compile Include="Reflection\AmbiguousMatchException.cs" />
     <Compile Include="Reflection\Assembly.cs" />
+    <Compile Include="Reflection\ParameterInfo.cs" />
     <Compile Include="TimeSpan.cs" />
     <Compile Include="CompilerServices\RuntimeHelpers.cs" />
     <Compile Include="Linq\Expressions\BinaryExpression.cs" />

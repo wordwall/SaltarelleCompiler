@@ -53,5 +53,11 @@ namespace System.Reflection {
 		public bool IsExpandParams { [InlineCode("{this}.exp || false")] get; [InlineCode("{this}.exp = {value}")] private set; }
 
 		internal MethodInfo() {}
+
+        [InlineCode("{this}.params")]
+        public ParameterInfo[] GetParameters()
+        {
+            return null;
+        }
 	}
 }
