@@ -193,6 +193,29 @@ ss.isUpper = function#? DEBUG ss$isUpper##(c) {
 	return s !== s.toLowerCase() && s === s.toUpperCase();
 };
 
+ss.toLower = function#? DEBUG ss$toLower##(c) {
+	var s = String.fromCharCode(c);
+	return s.toLowerCase();
+};
+
+ss.toUpper = function#? DEBUG ss$toUpper##(c) {
+	var s = String.fromCharCode(c);
+	return s.toUpperCase();
+};
+
+ss.isNumber = function#? DEBUG isNumber##(c) {
+    return c >= 48 && c <= 59;
+};
+
+ss.isLetter = function#? DEBUG isLetter##(c) {
+    var s = String.fromCharCode(c);
+    return (s.toLowerCase() != s.toUpperCase());
+};
+
+ss.isPunctuation = function#? DEBUG ss$isPunctuation##(c) {
+    return !(ss.isNumber(c) || ss.isLetter(c));
+};
+
 if (typeof(window) == 'object') {
 	// Browser-specific stuff that could go into the Web assembly, but that assembly does not have an associated JS file.
 	if (!window.Element) {

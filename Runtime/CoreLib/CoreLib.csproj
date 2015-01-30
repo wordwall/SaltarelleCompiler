@@ -260,10 +260,5 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\CoreLib.Plugin\bin\CoreLib.Plugin.dll">
-      <Link>CoreLib.Plugin.dll</Link>
-    </EmbeddedResource>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

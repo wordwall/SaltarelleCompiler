@@ -88,5 +88,35 @@ namespace System {
 		public static bool IsUpper(char ch) {
 			return false;
 		}
-	}
+
+        [InlineCode("({$System.Script}.toUpper({ch})")]
+	    public static char ToUpper(char ch)
+	    {
+	        return (char)0;
+	    }
+
+        [InlineCode("({$System.Script}.toLower({ch})")]
+        public static char ToLower(char ch)
+        {
+            return (char)0;
+        }
+
+        [InlineCode("({$System.Script}.isNumber({ch})")]
+        public static bool IsNumber(char ch)
+        {
+            return false;
+        }
+
+        [InlineCode("({$System.Script}.isLetter({ch})")]
+        public static bool IsLetter(char ch)
+        {
+            return false;
+        }
+
+        [InlineCode("({$System.Script}.isPunctuation({ch})")]
+        public static bool IsPunctuation(char ch)
+        {
+            return false;
+        }
+    }
 }

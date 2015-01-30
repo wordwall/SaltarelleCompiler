@@ -631,6 +631,12 @@ namespace System {
 			return false;
 		}
 
+        [InlineCode("({this}.indexOf({$System.String}.fromCharCode({ch})) !== -1)")]
+        public bool Contains(char ch)
+        {
+            return false;
+        }
+
 		[InlineCode("{this}.split('').map(function(s) {{ return s.charCodeAt(0); }})")]
 		public char[] ToCharArray() {
 			return null;

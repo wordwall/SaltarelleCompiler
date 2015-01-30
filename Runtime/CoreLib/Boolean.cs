@@ -31,5 +31,12 @@ namespace System {
 		public static bool Parse(string value) {
 			return false;
 		}
+
+        [InlineCode("{$System.Script}.tryParseBool({s}, {result})")]
+        public static bool TryParse(string s, out bool result)
+        {
+            result = false;
+            return false;
+        }
 	}
 }

@@ -172,3 +172,19 @@ ss.tryParseFloat = function#? DEBUG ss$tryParseFloat##(s, result) {
     result.$ = n;
     return true;
 };
+
+ss.tryParseBool = function#? DEBUG ss$tryParseBool##(s, result)
+{
+    if ((/^\s*true\s*$/i).test(s)) {
+        result.$ = true;
+        return true;
+    }
+    if ((/^\s*false\s*$/i).test(s)) {
+        result.$ = false;
+        return true;
+    }
+
+    result.$ = false;
+    return false;
+};
+
