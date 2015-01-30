@@ -260,5 +260,14 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\CoreLib.Plugin\bin\CoreLib.Plugin.dll">
+      <Link>CoreLib.Plugin.dll</Link>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(SolutionDir)CoreLib\bin\mscorlib.dll" "$(SolutionDir)..\..\VEL.Wordwall4\VEL.Saltarelle\mscorlib.dll"
+copy "$(SolutionDir)CoreLib.Script\bin\mscorlib.js" "$(SolutionDir)..\..\VEL.Wordwall4\VEL.Saltarelle\mscorlib.js"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

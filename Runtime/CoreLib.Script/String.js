@@ -247,3 +247,18 @@ ss.indexOfString = function#? DEBUG ss$indexOfString##(s, search, startIndex, co
 	var index = s.indexOf(search, startIndex);
 	return ((index + search.length) <= (startIndex + count)) ? index : -1;
 };
+
+String.getEnumerator = function(array) {
+
+    var f = new Object();
+    
+    f.array = array;
+    f.index = -1;
+
+    f.moveNext = function() { this.index++;  return (this.index < this.array.length);};
+    f.reset = function() { this.index = -1;};
+    f.current = function() { return this.array[this.index].charCodeAt(0);};
+    f.dispose = function() {};
+
+    return f;
+};

@@ -18,7 +18,7 @@ ss.initAssembly = function#? DEBUG assembly##(obj, name, res) {
 	obj.toString = function() { return this.name; };
 	obj.__types = {};
 	obj.getResourceNames = function() { return Object.keys(res); };
-	obj.getResourceDataBase64 = function(name) { return res[name] || null; };
+	obj.getResourceDataBase64 = function(name) { return res[name] || null; }
 	obj.getResourceData = function(name) { var r = res[name]; return r ? ss.dec64(r) : null; };
 	ss.__assemblies[name] = obj;
 };
@@ -195,12 +195,12 @@ ss.isUpper = function#? DEBUG ss$isUpper##(c) {
 
 ss.toLower = function#? DEBUG ss$toLower##(c) {
 	var s = String.fromCharCode(c);
-	return s.toLowerCase();
+	return String.s.toLowerCase().charCodeAt(0);
 };
 
 ss.toUpper = function#? DEBUG ss$toUpper##(c) {
 	var s = String.fromCharCode(c);
-	return s.toUpperCase();
+	return s.toUpperCase().charCodeAt(0);
 };
 
 ss.isNumber = function#? DEBUG isNumber##(c) {

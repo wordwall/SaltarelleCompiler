@@ -32,7 +32,8 @@ namespace System {
 		[IndexerName("Chars")]
 		public char this[int index] { [InlineCode("{this}.charCodeAt({index})")] get { return '\0'; } }
 
-		[NonScriptable]
+		//[NonScriptable]
+        [InlineCode("{$System.String}.getEnumerator({this})")]
 		public IEnumerator<char> GetEnumerator() { return null; }
 
 		/// <summary>
@@ -641,5 +642,6 @@ namespace System {
 		public char[] ToCharArray() {
 			return null;
 		}
+
 	}
 }
