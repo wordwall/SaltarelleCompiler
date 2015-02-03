@@ -703,6 +703,12 @@ namespace System.Threading {
 		public int ManagedThreadId { get { return 0; } }
 		public static Thread CurrentThread { get { return null; } }
 	}
+
+    public static class Timeout
+    {
+        [InlineCode("setTimeout({action},{delay})")]
+        public static void Run(Action action, int delay) { return; }
+    }
 }
 
 namespace System.Security.Permissions {

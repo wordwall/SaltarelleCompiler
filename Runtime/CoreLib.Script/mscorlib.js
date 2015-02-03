@@ -195,7 +195,7 @@ ss.isUpper = function#? DEBUG ss$isUpper##(c) {
 
 ss.toLower = function#? DEBUG ss$toLower##(c) {
 	var s = String.fromCharCode(c);
-	return String.s.toLowerCase().charCodeAt(0);
+	return s.toLowerCase().charCodeAt(0);
 };
 
 ss.toUpper = function#? DEBUG ss$toUpper##(c) {
@@ -209,7 +209,7 @@ ss.isNumber = function#? DEBUG isNumber##(c) {
 
 ss.isLetter = function#? DEBUG isLetter##(c) {
     var s = String.fromCharCode(c);
-    return (s.toLowerCase() != s.toUpperCase());
+    return s.toLowerCase() != s.toUpperCase();
 };
 
 ss.isPunctuation = function#? DEBUG ss$isPunctuation##(c) {
