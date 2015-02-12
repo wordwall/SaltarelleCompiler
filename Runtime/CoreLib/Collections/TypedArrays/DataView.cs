@@ -3,6 +3,17 @@ using System.Runtime.CompilerServices;
 namespace System.Collections.TypedArrays {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
 	public class DataView : ArrayBufferView {
+
+        [InlineCode("new DataView(new Uint8Array({bytes}).buffer)")]
+        public DataView(byte[] bytes)
+        {
+        }
+
+        [InlineCode("new DataView({view}.buffer,{byteOffset},{byteLength})")]
+        public DataView(DataView view, long byteOffset, long byteLength)
+        {
+        }
+
 		public DataView(ArrayBuffer buffer) {
 		}
 
