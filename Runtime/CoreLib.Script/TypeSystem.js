@@ -293,7 +293,7 @@ ss.safeCast = function#? DEBUG ss$safeCast##(instance, type) {
 };
 
 ss.cast = function#? DEBUG ss$cast##(instance, type) {
-	if (instance === null || typeof(instance) === 'undefined')
+    if (instance === null || typeof(instance) === 'undefined'|| typeof(instance) === 'object')
 		return instance;
 	else if (type === true || (type !== false && ss.isInstanceOfType(instance, type)))
 		return instance;
