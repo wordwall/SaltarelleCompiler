@@ -204,7 +204,7 @@ ss.toUpper = function#? DEBUG ss$toUpper##(c) {
 };
 
 ss.isNumber = function#? DEBUG isNumber##(c) {
-    return c >= 48 && c <= 59;
+    return c >= 48 && c <= 57;
 };
 
 ss.isLetter = function#? DEBUG isLetter##(c) {
