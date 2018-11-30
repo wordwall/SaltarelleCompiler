@@ -207,13 +207,18 @@ ss.isNumber = function#? DEBUG isNumber##(c) {
     return c >= 48 && c <= 57;
 };
 
+ss.isWhiteSpace = function#? DEBUG isWhiteSpace##(c) {
+    return c <= 32;
+};
+
 ss.isLetter = function#? DEBUG isLetter##(c) {
-    var s = String.fromCharCode(c);
-    return s.toLowerCase() != s.toUpperCase();
+    return !(ss.isNumber(c) || ss.isPunctuation(c) || ss.isWhiteSpace(c));
 };
 
 ss.isPunctuation = function#? DEBUG ss$isPunctuation##(c) {
-    return !(ss.isNumber(c) || ss.isLetter(c));
+    if (c >= 8192 && c <= 8303 || c >= 11776 && c <= 11903 || c===161 || c===191 || c===171 || c===183 || c===187 ) return true;
+    var s = String.fromCharCode(c);
+    return "!\"#%&'()*,-./:;?@[\\]_{}".indexOf(s)!==-1;
 };
 
 if (typeof(window) == 'object') {

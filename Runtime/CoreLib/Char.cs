@@ -118,5 +118,11 @@ namespace System {
         {
             return false;
         }
+
+	    [InlineCode("{$System.Script}.isWhiteSpace({ch})")]
+        public static bool IsWhiteSpace(char ch)
+	    {
+	        return false;
+	    }
     }
 }
